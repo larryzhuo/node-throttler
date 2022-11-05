@@ -6,7 +6,7 @@ const videoUtilIns = new VideoUtil();
   // const ret = await videoUtilIns.getVideoInfo(
   //   '/Users/apple/Desktop/48c0345c87d6149127dabb7c9b5c3de0-1661482184103.mp4',
   // );
-  let t1 = Date.now();
+  const t1 = Date.now();
   console.log('t1', t1);
   const ret = await videoUtilIns.getVideoFrame({
     // retType: 'path',
