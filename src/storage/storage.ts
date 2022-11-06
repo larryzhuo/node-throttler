@@ -13,8 +13,18 @@ export interface IStorage {
   getRecord: (key: string) => Promise<number[]>;
 
   /**
+   * Get a record size via its key and return size
+   */
+  getRecordSize: (key: string) => Promise<number>;
+
+  /**
    * Add a record to the storage. The record will automatically be removed from
    * the storage once its TTL has been reached.
    */
   addRecord: (key: string, ttl: number) => Promise<void>;
+
+  /**
+   * destory storage
+   */
+  destory: () => Promise<void>;
 }

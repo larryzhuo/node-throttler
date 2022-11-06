@@ -1,11 +1,17 @@
+export interface IAcquireOption {
+  key: string;
+}
+
 export interface IThrottler {
   /**
-   * implement acquire token
+   * acquire token
+   * if reach limit, return false;
+   * else if not reach limit, return true;
    */
-  tryAcquire: () => boolean;
+  tryAcquire: (option: IAcquireOption) => Promise<boolean>;
 
   /**
    * destory throttler
    */
-  destory: () => void;
+  destory: () => Promise<void>;
 }

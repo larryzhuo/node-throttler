@@ -1,4 +1,4 @@
-import { RedisOptions } from 'ioredis';
+import { ClusterNode, RedisOptions } from 'ioredis';
 
 export enum StorageTypeEnum {
   memory = 'memory',
@@ -7,7 +7,7 @@ export enum StorageTypeEnum {
 
 export interface IThrottlerStorageOption {
   type: StorageTypeEnum;
-  options?: RedisOptions;
+  options?: IRedisOption;
 }
 
 export interface IThrottlerOption {
@@ -25,4 +25,13 @@ export interface IThrottlerOption {
    * The storage class to use where all the record will be stored in.
    */
   storage?: IThrottlerStorageOption;
+}
+
+export interface IRedisClusterOption {
+  cluster?: boolean;
+  nodes?: ClusterNode[];
+}
+
+export interface IRedisOption extends RedisOptions, IRedisClusterOption {
+  ttl?: number; // key expire ttl, default 60s
 }
