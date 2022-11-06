@@ -1,10 +1,10 @@
 ## Introduce
-A Node.js RateLimiter, Commonly used to request throttling. 
+A Node.js RateLimiter, it's core design based [@nestjs/throttler](https://www.npmjs.com/package/@nestjs/throttler) Commonly used to request throttling. 
 
 It is sufficiently extensible， so you can implement IThrottler interface to redefine you strategy (now support a simple RawThrottler) and you can implement IStorage interface to redefine your storage (now support memory and redis). 
 
 ## 介绍
-这是一个 Node.js 实现的限流器， 一般用于 web 请求中限流。 它拥有足够的扩展性，你能够实现 IThrottler 接口来重新定义策略， 也能够实现 IStorage 接口重新定义存储方式（目前存储方式支持内存和redis）
+这是一个 Node.js 实现的限流器 ，它的核心设计基于[@nestjs/throttler](https://www.npmjs.com/package/@nestjs/throttler)， 一般用于 web 请求中限流。 它拥有足够的扩展性，你能够实现 IThrottler 接口来重新定义策略， 也能够实现 IStorage 接口重新定义存储方式（目前存储方式支持内存和redis）
 
 ### Install
 
