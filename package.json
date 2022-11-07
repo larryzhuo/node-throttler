@@ -1,10 +1,14 @@
 {
   "name": "traffic-throttler",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Node.js throttler, Commonly used to request throttling",
   "main": "lib/index.js",
   "author": "larryzhuo",
-  "keywords": ["throttler", "rate limiter", "traffic"],
+  "keywords": [
+    "throttler",
+    "rate limiter",
+    "traffic"
+  ],
   "dependencies": {
     "ioredis": "^5.2.4",
     "log4js": "^6.4.4"
