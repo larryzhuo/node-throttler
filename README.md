@@ -32,7 +32,7 @@ tryAcquire: (option: IAcquireOption) => Promise<boolean>; //acquire token; if re
 
 ### 3. destory
 ```typescript
-tryAcquire: (option: IAcquireOption) => Promise<boolean>; //destory throttler instance
+destory: () => Promise<void>; //destory throttler instance
 ```
 
 
