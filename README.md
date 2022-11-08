@@ -12,7 +12,7 @@ It is sufficiently extensible， so you can implement IThrottler interface to re
 
 ### Install （安装）
 
-> npm i node-throttler
+> npm i traffic-throttler
 
 ### API
 
