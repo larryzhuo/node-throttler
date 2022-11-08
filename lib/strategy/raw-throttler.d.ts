@@ -7,7 +7,6 @@ export declare class RawThrottler implements IThrottler {
     private _storage;
     private limit;
     private ttl;
-    private _timer?;
     constructor(options: IThrottlerOption);
     /**
      * raw throttler, key generator by your self

@@ -11,7 +11,6 @@ export class RawThrottler implements IThrottler {
   private _storage: IStorage;
   private limit: number;
   private ttl: number;
-  private _timer?: NodeJS.Timer;
 
   constructor(options: IThrottlerOption) {
     // default memory storage
@@ -46,10 +45,7 @@ export class RawThrottler implements IThrottler {
   }
 
   async destory(): Promise<void> {
-    if (this._timer) {
-      clearInterval(this._timer);
-      logger.info(`timer destory`);
-    }
+    logger.info(`throtter call destory`);
     if (this._storage) {
       await this._storage.destory();
     }
