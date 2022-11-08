@@ -1,6 +1,6 @@
 {
   "name": "traffic-throttler",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Node.js throttler, Commonly used to request throttling",
   "main": "lib/index.js",
   "author": "larryzhuo",
