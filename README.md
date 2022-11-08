@@ -6,17 +6,17 @@ It is sufficiently extensible， so you can implement IThrottler interface to re
 ## 介绍
 这是一个 Node.js 实现的限流器 ，它的核心设计基于[@nestjs/throttler](https://www.npmjs.com/package/@nestjs/throttler)， 一般用于 web 请求中限流。 它拥有足够的扩展性，你能够实现 IThrottler 接口来重新定义策略， 也能够实现 IStorage 接口重新定义存储方式（目前存储方式支持内存和redis）
 
-### Relative Package （关联包）
+## Relative Package （关联包）
 
 [midway-throttler](https://www.npmjs.com/package/midway-throttler) Midway.js 限流器
 
-### Install （安装）
+## Install （安装）
 
 > npm i traffic-throttler --save
 
-### API
+## API
 
-#### 1. throttle constructor
+### 1. throttle constructor
 ```typescript
 const throttler = new RawThrottler({
   limit: number, //The amount of requests that are allowed within the ttl's time window.
@@ -25,20 +25,20 @@ const throttler = new RawThrottler({
 });
 ```
 
-#### 2. tryAcquire
+### 2. tryAcquire
 ```typescript
 tryAcquire: (option: IAcquireOption) => Promise<boolean>; //acquire token; if reach limit, return false; else if not reach limit, return true;
 ```
 
-#### 3. destory
+### 3. destory
 ```typescript
 tryAcquire: (option: IAcquireOption) => Promise<boolean>; //destory throttler instance
 ```
 
 
-### Example
+## Example
 
-#### Memory Storage Demo
+### Memory Storage Demo
 ```typescript
 
 async function sleep(time) {
@@ -79,7 +79,7 @@ async function main() {
 }
 ```
 
-#### Redis Storage Demo
+### Redis Storage Demo
 ```typescript
 
 async function sleep(time) {
