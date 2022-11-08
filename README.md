@@ -6,7 +6,11 @@ It is sufficiently extensible， so you can implement IThrottler interface to re
 ## 介绍
 这是一个 Node.js 实现的限流器 ，它的核心设计基于[@nestjs/throttler](https://www.npmjs.com/package/@nestjs/throttler)， 一般用于 web 请求中限流。 它拥有足够的扩展性，你能够实现 IThrottler 接口来重新定义策略， 也能够实现 IStorage 接口重新定义存储方式（目前存储方式支持内存和redis）
 
-### Install
+### Relative Package （关联包）
+
+[midway-throttler](https://www.npmjs.com/package/midway-throttler) Midway.js 限流器
+
+### Install （安装）
 
 > npm i node-throttler
 
