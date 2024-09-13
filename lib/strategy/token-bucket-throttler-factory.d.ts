@@ -9,5 +9,5 @@ export declare class TokenBucketThrottlerFactory {
     options: IThrottlerOption;
     constructor(opts: IThrottlerOption);
     getThrottler(key: string): TokenBucketThrottler;
-    destory(): Promise<void>;
+    destory(): void;
 }

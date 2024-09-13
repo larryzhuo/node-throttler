@@ -27,7 +27,7 @@ export class TokenBucketThrottlerFactory {
     return throttler;
  }
 
-  async destory(): Promise<void> {
+  public destory() {
     if(this.lruMap) {
       this.lruMap.clear();
     }
