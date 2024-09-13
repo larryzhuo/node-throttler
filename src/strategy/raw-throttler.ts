@@ -5,7 +5,7 @@ import { IAcquireOption, IThrottler } from './throttler';
 import logger from '../log/log';
 
 /**
- * a raw throttler
+ * 基于 setTimeout 定时器限流
  */
 export class RawThrottler implements IThrottler {
   private _storage: IStorage;

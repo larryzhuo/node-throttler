@@ -17,6 +17,7 @@
     "@babel/core": "^7.20.2",
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-typescript": "^7.18.6",
+    "@types/collections": "^5.1.5",
     "@types/jest": "^29.2.2",
     "@types/node": "^18.7.18",
     "babel-jest": "^29.2.2",
@@ -37,7 +38,8 @@
     "start": "tsc --watch",
     "f2elint-scan": "f2elint scan",
     "f2elint-fix": "f2elint fix",
-    "test": "jest --detectOpenHandles"
+    "test": "jest --detectOpenHandles",
+    "testtoken": "jest --detectOpenHandles ./test/token-bucket-throttler.test.ts"
   },
   "husky": {
     "hooks": {

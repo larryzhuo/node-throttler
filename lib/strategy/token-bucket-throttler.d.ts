@@ -1,13 +1,19 @@
 import { IThrottlerOption } from '../interface';
 import { IAcquireOption, IThrottler } from './throttler';
 /**
- * 基于 setTimeout 定时器限流
+ * 令牌桶限流
  */
-export declare class RawThrottler implements IThrottler {
-    private _storage;
+export declare class TokenBucketThrottler implements IThrottler {
     private limit;
-    private ttl;
+    private tokens;
+    private lastRefillTime;
+    private capacity;
     constructor(options: IThrottlerOption);
+    /**
+     * 生成令牌
+     * @param now
+     */
+    private refillToken;
     /**
      * raw throttler, key generator by your self
      * @param option

@@ -4,6 +4,7 @@ import logger from '../log/log';
 
 /**
  * base on memory implement storage
+ * 没有 lru，流量大时，有内存溢出风险
  */
 export class MemoryStorage implements IStorage {
   storage: Record<string, number[]> = {};
@@ -11,6 +12,7 @@ export class MemoryStorage implements IStorage {
 
   constructor(options: IThrottlerStorageOption) {
     logger.info('MemoryStorage options:%s', options);
+    let {} = options;
   }
 
   async getRecordSize(key: string): Promise<number> {

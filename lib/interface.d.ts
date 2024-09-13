@@ -1,7 +1,8 @@
 import { ClusterNode, RedisOptions } from 'ioredis';
 export declare enum StorageTypeEnum {
     memory = "memory",
-    redis = "redis"
+    redis = "redis",
+    tokenBucket = "tokenBucket"
 }
 export interface IThrottlerStorageOption {
     type: StorageTypeEnum;
@@ -16,6 +17,11 @@ export interface IThrottlerOption {
      * The amount of seconds of how many requests are allowed within this time.
      */
     ttl?: number;
+    lruLimitSize?: number;
+    /**
+     * 最大瞬间请求量
+     */
+    capacity?: number;
     /**
      * The storage class to use where all the record will be stored in.
      */
@@ -27,4 +33,11 @@ export interface IRedisClusterOption {
 }
 export interface IRedisOption extends RedisOptions, IRedisClusterOption {
     ttl?: number;
+    capacity?: number;
+    tokensPerInterval?: number;
+}
+export interface ILruMap<T> {
+    length: number;
+    get(key: string): T;
+    set(key: string, v: T): boolean;
 }

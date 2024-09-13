@@ -4,7 +4,7 @@ const log4js = require('log4js');
 
 log4js.configure({
   appenders: { throttler: { type: 'file', filename: `${os.homedir()}/throttler.log` } },
-  categories: { default: { appenders: ['throttler'], level: 'info' } },
+  categories: { default: { appenders: ['throttler'], level: 'debug' } },
 });
 
 const logger = log4js.getLogger('throttler');
