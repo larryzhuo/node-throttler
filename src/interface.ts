@@ -53,4 +53,5 @@ export interface ILruMap<T> {
   length: number;
   get(key:string):T;
   set(key:string,v:T):boolean;
+  clear():void;
 }

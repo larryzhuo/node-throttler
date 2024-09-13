@@ -28,6 +28,8 @@ export class TokenBucketThrottlerFactory {
  }
 
   async destory(): Promise<void> {
-    logger.info(`throtter call destory`);
+    if(this.lruMap) {
+      this.lruMap.clear();
+    }
   }
 }
